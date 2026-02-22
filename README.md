@@ -6,16 +6,16 @@ It’s recommended to activate your Python virtual environment before running an
 
 ```bash
 ./activate.sh
-` `` 
+```
 *(If you get a permission error, run: `chmod +x activate.sh` first.)*
 
 **For Windows:**
+
 ```bat
 activate.bat
 ```
 
 This will:
-
 - Create the `.venv` folder if needed
 - Activate the virtual environment
 - Install dependencies from requirements.txt
@@ -28,33 +28,44 @@ python news_agent.py
 python app.py
 ```
 
-## Gradio-käyttöliittymä (app.py)
+---
 
-Käynnistä Gradio-sovellus komennolla:
+## Gradio App Interface (app.py)
+
+Start the Gradio application with:
 
 ```bash
 python app.py
 ```
 
-Sovelluksessa voit syöttää aiheen tai avainsanan (esim. nato, sports, economy, entertainment, politics, science, technology, health, weather, culture, travel, education, business, environment) ja saat uutisotsikoiden sentimentti- ja clickbait-analyysin.
+In the app, you can input a topic or keyword (such as: 'nato', 'sports', 'economy', 'entertainment', 'politics', 'science', 'technology', 'health', 'weather', 'culture', 'travel', 'education', 'business', 'environment') and receive sentiment and clickbait analysis of news headlines.
 
-## NewsAgent analyysin tulokset ja selitykset
+---
 
-news_agent.py tallentaa analyysitulokset tiedostoon `news_results.json`. Jokaiselle uutiselle:
+## NewsAgent Analysis Results and Explanations
 
-- `rss_url`: RSS-lähteen osoite
-- `url`: uutisen linkki
-- `headline`: otsikko
-- `headline_score`: otsikon sentimenttianalyysi
-- `body_score`: uutisen rungon sentimenttianalyysi
-- `clickbait`: onko otsikko clickbait (True = kyllä)
+news_agent.py saves the analysis results to the file `news_results.json`. For each news item:
+- `rss_url`: the RSS source address
+- `url`: news link
+- `headline`: headline text
+- `headline_score`: sentiment analysis of the headline
+- `body_score`: sentiment analysis of the article body
+- `clickbait`: whether the headline is considered clickbait (True = yes)
 
-Selitykset:
+Explanation of fields:
+- `neg`: How negative the text is (0–1)
+- `neu`: How neutral the text is (0–1)
+- `pos`: How positive the text is (0–1)
+- `compound`: Overall score (-1 = very negative, +1 = very positive)
+- `clickbait`: If headline and body sentiment scores differ significantly or the headline is highly negative, it is considered clickbait.
 
-- `neg`: Kuinka negatiivinen teksti on (0–1)
-- `neu`: Kuinka neutraali teksti on (0–1)
-- `pos`: Kuinka positiivinen teksti on (0–1)
-- `compound`: Yhteenvetopiste (-1 = hyvin negatiivinen, +1 = hyvin positiivinen)
-- `clickbait`: Jos otsikon ja rungon sentimenttipisteet eroavat paljon tai otsikko on hyvin negatiivinen, sitä pidetään clickbaitina
+You can use these results to assess news quality and identify clickbait headlines.
 
-Tuloksia voi käyttää uutisten laadun arviointiin ja clickbait-otsikoiden tunnistamiseen.
+---
+
+## Additional Recommendations
+
+- Always maintain up-to-date documentation (README, requirements.txt, code comments).
+- Use Python virtual environments for every project.
+- Expand code comments to clarify purpose and logic in each file.
+- For more detailed information or files, visit: [news_verifier on GitHub](https://github.com/allegoria-ai/news_verifier).
