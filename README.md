@@ -28,33 +28,33 @@ python news_agent.py
 python app.py
 ```
 
-## Gradio-käyttöliittymä (app.py)
+## Gradio UI (app.py)
 
-Käynnistä Gradio-sovellus komennolla:
+Start the Gradio application with:
 
 ```bash
 python app.py
 ```
 
-Sovelluksessa voit syöttää aiheen tai avainsanan (esim. nato, sports, economy, entertainment, politics, science, technology, health, weather, culture, travel, education, business, environment) ja saat uutisotsikoiden sentimentti- ja clickbait-analyysin.
+In the application you can enter a topic or keyword (e.g. nato, sports, economy, entertainment, politics, science, technology, health, weather, culture, travel, education, business, environment) and get sentiment and clickbait analysis of news headlines.
 
-## NewsAgent analyysin tulokset ja selitykset
+## NewsAgent analysis results and explanations
 
-news_agent.py tallentaa analyysitulokset tiedostoon `news_results.json`. Jokaiselle uutiselle:
+news_agent.py saves the analysis results to the file `news_results.json`. For each news item:
 
-- `rss_url`: RSS-lähteen osoite
-- `url`: uutisen linkki
-- `headline`: otsikko
-- `headline_score`: otsikon sentimenttianalyysi
-- `body_score`: uutisen rungon sentimenttianalyysi
-- `clickbait`: onko otsikko clickbait (True = kyllä)
+- `rss_url`: RSS source URL
+- `url`: news article link
+- `headline`: headline
+- `headline_score`: sentiment analysis of the headline
+- `body_score`: sentiment analysis of the news body
+- `clickbait`: whether the headline is clickbait (True = yes)
 
-Selitykset:
+Explanations:
 
-- `neg`: Kuinka negatiivinen teksti on (0–1)
-- `neu`: Kuinka neutraali teksti on (0–1)
-- `pos`: Kuinka positiivinen teksti on (0–1)
-- `compound`: Yhteenvetopiste (-1 = hyvin negatiivinen, +1 = hyvin positiivinen)
-- `clickbait`: Jos otsikon ja rungon sentimenttipisteet eroavat paljon tai otsikko on hyvin negatiivinen, sitä pidetään clickbaitina
+- `neg`: How negative the text is (0–1)
+- `neu`: How neutral the text is (0–1)
+- `pos`: How positive the text is (0–1)
+- `compound`: Summary score (-1 = very negative, +1 = very positive)
+- `clickbait`: If the sentiment scores of the headline and body differ significantly or the headline is very negative, it is considered clickbait
 
-Tuloksia voi käyttää uutisten laadun arviointiin ja clickbait-otsikoiden tunnistamiseen.
+The results can be used to assess news quality and identify clickbait headlines.
