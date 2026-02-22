@@ -27,10 +27,10 @@ def analyze_headlines(topic):
 # Define Gradio interface
 iface = gr.Interface(
     fn=analyze_headlines,  # Function to wrap
-    inputs=gr.inputs.Textbox(label="Enter a topic or keyword:"),  # User input
-    outputs=gr.outputs.JSON(label="Analysis Results:"),  # Output type
+    inputs=gr.Textbox(label="Enter a topic or keyword:"),  # User input
+    outputs=gr.JSON(label="Analysis Results:"),  # Output type
     title="News Verifier",  # Title of the app
-    description="Input a topic or keyword to fetch and analyze headlines for sentiment and clickbait detection."  # App description
+    description="Input a topic or keyword (e.g. nato, sports, economy, entertainment, politics, science, technology, health, weather, culture, travel, education, business, environment) to fetch and analyze headlines for sentiment and clickbait detection."
 )
 
 # Launch the Gradio interface

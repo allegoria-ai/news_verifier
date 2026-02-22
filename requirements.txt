@@ -2,3 +2,4 @@ gradio
 requests
 beautifulsoup4
 nltk
+lxml

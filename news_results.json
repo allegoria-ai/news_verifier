@@ -1,0 +1,218 @@
+[
+  {
+    "rss_url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "url": "https://www.bbc.com/news/articles/c4g8r23yv71o?at_medium=RSS&at_campaign=rss",
+    "headline": "Why fake AI videos of UK urban decline are taking over social media",
+    "headline_score": {
+      "neg": 0.205,
+      "neu": 0.795,
+      "pos": 0.0,
+      "compound": -0.4767
+    },
+    "body_score": {
+      "neg": 0.112,
+      "neu": 0.831,
+      "pos": 0.057,
+      "compound": -0.9982
+    },
+    "clickbait": true
+  },
+  {
+    "rss_url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "url": "https://www.bbc.com/news/articles/cn4gq352w89o?at_medium=RSS&at_campaign=rss",
+    "headline": "Tumbler Ridge suspect's ChatGPT account banned before shooting",
+    "headline_score": {
+      "neg": 0.3,
+      "neu": 0.7,
+      "pos": 0.0,
+      "compound": -0.4588
+    },
+    "body_score": {
+      "neg": 0.206,
+      "neu": 0.775,
+      "pos": 0.019,
+      "compound": -0.9989
+    },
+    "clickbait": true
+  },
+  {
+    "rss_url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "url": "https://www.bbc.com/news/articles/c0q3g0ln274o?at_medium=RSS&at_campaign=rss",
+    "headline": "Urgent research needed to tackle AI threats, says Google AI boss",
+    "headline_score": {
+      "neg": 0.206,
+      "neu": 0.662,
+      "pos": 0.132,
+      "compound": -0.25
+    },
+    "body_score": {
+      "neg": 0.058,
+      "neu": 0.805,
+      "pos": 0.137,
+      "compound": 0.9952
+    },
+    "clickbait": true
+  },
+  {
+    "rss_url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "url": "https://www.bbc.com/news/articles/c5yj2kzkrj0o?at_medium=RSS&at_campaign=rss",
+    "headline": "Iran students stage first large anti-government protests since deadly crackdown",
+    "headline_score": {
+      "neg": 0.174,
+      "neu": 0.826,
+      "pos": 0.0,
+      "compound": -0.2263
+    },
+    "body_score": {
+      "neg": 0.125,
+      "neu": 0.793,
+      "pos": 0.082,
+      "compound": -0.9849
+    },
+    "clickbait": true
+  },
+  {
+    "rss_url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "url": "https://www.bbc.com/news/articles/c93w9g2dvn5o?at_medium=RSS&at_campaign=rss",
+    "headline": "More than 1,500 Venezuelan political prisoners apply for amnesty",
+    "headline_score": {
+      "neg": 0.292,
+      "neu": 0.708,
+      "pos": 0.0,
+      "compound": -0.5106
+    },
+    "body_score": {
+      "neg": 0.113,
+      "neu": 0.844,
+      "pos": 0.043,
+      "compound": -0.9835
+    },
+    "clickbait": true
+  },
+  {
+    "rss_url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "url": "https://www.bbc.com/news/articles/cp9m0zp04xyo?at_medium=RSS&at_campaign=rss",
+    "headline": "Final missing Lake Tahoe skier found dead 5 days after avalanche ",
+    "headline_score": {
+      "neg": 0.448,
+      "neu": 0.552,
+      "pos": 0.0,
+      "compound": -0.7579
+    },
+    "body_score": {
+      "neg": 0.096,
+      "neu": 0.84,
+      "pos": 0.064,
+      "compound": -0.9599
+    },
+    "clickbait": true
+  },
+  {
+    "rss_url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+    "url": "https://www.bbc.com/news/articles/c626v265zqlo?at_medium=RSS&at_campaign=rss",
+    "headline": "Nasa astronauts' moon mission delayed due to rocket issue",
+    "headline_score": {
+      "neg": 0.192,
+      "neu": 0.808,
+      "pos": 0.0,
+      "compound": -0.2263
+    },
+    "body_score": {
+      "neg": 0.088,
+      "neu": 0.839,
+      "pos": 0.072,
+      "compound": -0.9051
+    },
+    "clickbait": true
+  },
+  {
+    "rss_url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+    "url": "https://www.bbc.com/news/articles/c9wn1jrzk4go?at_medium=RSS&at_campaign=rss",
+    "headline": "Giant tortoises return to Galápagos island after nearly 200 years ",
+    "headline_score": {
+      "neg": 0.0,
+      "neu": 1.0,
+      "pos": 0.0,
+      "compound": 0.0
+    },
+    "body_score": {
+      "neg": 0.041,
+      "neu": 0.894,
+      "pos": 0.064,
+      "compound": 0.644
+    },
+    "clickbait": true
+  },
+  {
+    "rss_url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+    "url": "https://www.bbc.com/news/articles/c0e5l7ll31yo?at_medium=RSS&at_campaign=rss",
+    "headline": "Deer culling to be made easier to protect trees and crops",
+    "headline_score": {
+      "neg": 0.0,
+      "neu": 0.625,
+      "pos": 0.375,
+      "compound": 0.6597
+    },
+    "body_score": {
+      "neg": 0.064,
+      "neu": 0.819,
+      "pos": 0.118,
+      "compound": 0.993
+    },
+    "clickbait": false
+  },
+  {
+    "rss_url": "https://www.hs.fi/rss/uutiset.xml",
+    "url": "https://www.hs.fi/urheilu/art-2000011835491.html",
+    "headline": "Seuranta | Myös Jonna Sundling on sairastunut, ei hiihdä 50 kilometrin kisassa",
+    "headline_score": {
+      "neg": 0.0,
+      "neu": 1.0,
+      "pos": 0.0,
+      "compound": 0.0
+    },
+    "body_score": {
+      "neg": 0.0,
+      "neu": 1.0,
+      "pos": 0.0,
+      "compound": 0.0
+    },
+    "clickbait": false
+  },
+  {
+    "rss_url": "https://www.hs.fi/rss/uutiset.xml",
+    "url": "https://www.hs.fi/urheilu/art-2000011835721.html",
+    "headline": "Olympialaiset | HS jakoi Leijonille arvo­sanat: Joel Armialle täysi kymppi, Teuvo Teräväiselle nelonen",
+    "headline_score": {
+      "neg": 0.0,
+      "neu": 1.0,
+      "pos": 0.0,
+      "compound": 0.0
+    },
+    "body_score": {
+      "neg": 0.0,
+      "neu": 1.0,
+      "pos": 0.0,
+      "compound": 0.0
+    },
+    "clickbait": false
+  },
+  {
+    "rss_url": "https://www.hs.fi/rss/uutiset.xml",
+    "url": "https://www.hs.fi/suomi/art-2000011835631.html",
+    "headline": "Sää | Nyt tarkkana teillä: ajokeli on jopa vaarallinen",
+    "headline_score": {
+      "neg": 0.0,
+      "neu": 1.0,
+      "pos": 0.0,
+      "compound": 0.0
+    },
+    "body_score": {
+      "neg": 0.0,
+      "neu": 1.0,
+      "pos": 0.0,
+      "compound": 0.0
+    },
+    "clickbait": false
+  }
+]
