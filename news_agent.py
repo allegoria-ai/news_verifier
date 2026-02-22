@@ -3,9 +3,10 @@ from bs4 import BeautifulSoup
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-# Optional: Placeholder for future ML or Hugging Face integration
+BBC_RSS_URL = 'https://feeds.bbci.co.uk/news/technology/rss.xml'
+
 class NLPEngine:
-    """ Abstract NLP engine for sentiment. Swap with ML/HF models easily. """
+    """Modular NLP engine for sentiment/ML/NLP. Swap later as needed."""
     def __init__(self):
         self.sia = SentimentIntensityAnalyzer()
 
@@ -13,49 +14,48 @@ class NLPEngine:
         score = self.sia.polarity_scores(text)
         return score
 
-# Future: Add Hugging Face/ML integration here
+    # PLACEHOLDER: Future ML/Hugging Face integration
+    # def advanced_sentiment(self, text):
+    #     pass
 
 class NewsAgent:
-    """Fetches and analyzes news about AI (hype and risks vs reality). """
-    def __init__(self, topic='AI'):
-        self.topic = topic
+    def __init__(self, rss_url=BBC_RSS_URL):
+        self.rss_url = rss_url
         self.nlp = NLPEngine()
 
-    def fetch_articles(self):
-        # Insert your NewsAPI key below
-        api_key = 'YOUR_API_KEY'
-        url = f'https://newsapi.org/v2/everything?q={self.topic}&language=en&apiKey={api_key}'
-        resp = requests.get(url)
-        data = resp.json().get('articles', [])
-        return data
+    def fetch_rss(self):
+        resp = requests.get(self.rss_url)
+        soup = BeautifulSoup(resp.content, 'xml')
+        articles = []
+        for item in soup.find_all('item'):
+            headline = item.title.text
+            link = item.link.text
+            articles.append({'headline': headline, 'url': link})
+        return articles
 
-    def analyze_article(self, article):
-        headline = article.get('title', '')
-        url = article.get('url', '')
+    def fetch_article_body(self, url):
         try:
             resp = requests.get(url, timeout=6)
-            soup = BeautifulSoup(resp.text, 'html.parser')
-            body = ' '.join([p.text for p in soup.find_all('p')])
-        except Exception:
-            body = ''
-        head_score = self.nlp.sentiment(headline)
-        body_score = self.nlp.sentiment(body)
-        clickbait = abs(head_score['compound'] - body_score['compound']) > 0.4
-        return {
-            'headline': headline,
-            'headline_sentiment': head_score,
-            'body_sentiment': body_score,
-            'clickbait': clickbait,
-            'url': url
-        }
+            html = BeautifulSoup(resp.text, 'html.parser')
+            paragraphs = [p.get_text() for p in html.find_all('p')]
+            return '\n'.join(paragraphs)
+        except Exception as e:
+            return ''
 
-    def run(self):
-        articles = self.fetch_articles()
-        for article in articles[:3]:
-            result = self.analyze_article(article)
-            print(f"\nArticle: {result['url']}\nHeadline: {result['headline']}\nHeadline Sentiment: {result['headline_sentiment']}\nBody Sentiment: {result['body_sentiment']}\nClickbait: {result['clickbait']}")
+    def analyze(self):
+        articles = self.fetch_rss()
+        for art in articles[:3]: # Limit for laptop testing; expand as needed
+            print(f'URL: {art['url']}')
+            print(f'Headline: {art['headline']}')
+            body = self.fetch_article_body(art['url'])
+            headline_score = self.nlp.sentiment(art['headline'])
+            body_score = self.nlp.sentiment(body)
+            clickbait = abs(headline_score['compound'] - body_score['compound']) > 0.4
+            print(f'Headline Sentiment: {headline_score}')
+            print(f'Body Sentiment: {body_score}')
+            print(f'Clickbait?: {clickbait}\n')
 
 if __name__ == '__main__':
-    nltk.download('vader_lexicon')  # ensure sentiment module is ready
-    agent = NewsAgent('AI')  # You can change topic here
-    agent.run()
+    nltk.download('vader_lexicon')
+    agent = NewsAgent()
+    agent.analyze()
