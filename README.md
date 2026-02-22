@@ -1,35 +1,38 @@
 # News Verifier
 
-This project is a news agent that fetches, analyzes, and compares news about AI (hype and risks vs actual reality) from multiple sources, aiming to detect clickbait, misinformation, and bias.
+## Overview
+This project fetches news articles from the BBC Technology RSS feed, scrapes the content using BeautifulSoup, and performs sentiment analysis on the articles using NLTK. The design is modular, allowing easy expansions to incorporate machine learning or Hugging Face models for more advanced analysis in the future.
 
 ## Features
-- Fetches top news articles by topic from online sources
-- Compares headlines to article contents to detect exaggeration/clickbait
-- Analyzes tone (positive/negative/neutral)
-- Designed to be easily extended to include academic/government/expert sources
+- **RSS-based News Fetching:** Utilizes the [BBC Technology](https://www.bbc.co.uk/news/technology) feed to gather news articles.
+- **Web Scraping:** Employs BeautifulSoup for scraping article bodies to extract relevant content.
+- **Sentiment Analysis:** Implements NLP sentiment analysis using NLTK, which can easily be extended to support additional models.
+- **Interactive Web Interface:** Provides a Gradio interface that allows users to interact with the news analysis bot. The app can be run using `python app.py`.
 
-## Getting Started
+## Installation
+To install the required packages, clone the repository and run:
+```bash
+pip install -r requirements.txt
+```
 
-1. Clone this repository
-2. Create and activate a Python virtual environment:
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
-3. Install requirements:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the agent:
-   ```bash
-   python news_agent.py
-   ```
+## CLI Usage
+You can fetch news articles and analyze their sentiment directly from the command line using:
+```bash
+python cli.py --fetch
+python cli.py --analyze
+```
 
-## Requirements
-See requirements.txt
+## Gradio Usage
+To start the Gradio web interface, simply run:
+```bash
+python app.py
+```
+Then, navigate to `http://localhost:7860` in your browser to use the interactive news analysis bot.
 
-## Extendable
-You can add more sources and smarter NLP to improve verification and summarization.
+## Modular Design
+The project's modular design allows for:
+- Easy addition of new sentiment analysis models.
+- Integration with different news sources and feeds.
+- Customization of the Gradio interface for various user needs.
 
-## License
-[Specify license here]
+Future expansions can include the implementation of machine learning models or advanced NLP techniques. This flexibility ensures that the project can evolve with changing technology and user needs.
