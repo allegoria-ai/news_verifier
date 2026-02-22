@@ -1,4 +1,4 @@
+gradio
 requests
 beautifulsoup4
 nltk
-# transformers  # Uncomment when using Hugging Face models
