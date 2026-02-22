@@ -1,3 +1,19 @@
+## Cloning the Repository
+
+To clone this repository and get started, run:
+
+```
+git clone https://github.com/allegoria-ai/news_verifier.git
+cd news_verifier
+```
+
+**For Python projects, create and activate a virtual environment:**
+
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
 # Quick Setup: Activate Virtual Environment
 
 It’s recommended to activate your Python virtual environment before running any code. This keeps your dependencies isolated and your project safe.
@@ -7,6 +23,7 @@ It’s recommended to activate your Python virtual environment before running an
 ```bash
 ./activate.sh
 ```
+
 *(If you get a permission error, run: `chmod +x activate.sh` first.)*
 
 **For Windows:**
