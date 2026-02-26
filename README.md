@@ -1,3 +1,19 @@
+## Cloning the Repository
+
+To clone this repository and get started, run:
+
+```
+git clone https://github.com/allegoria-ai/news_verifier.git
+cd news_verifier
+```
+
+**For Python projects, create and activate a virtual environment:**
+
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
 # Quick Setup: Activate Virtual Environment
 
 It’s recommended to activate your Python virtual environment before running any code. This keeps your dependencies isolated and your project safe.
@@ -6,16 +22,17 @@ It’s recommended to activate your Python virtual environment before running an
 
 ```bash
 ./activate.sh
-` `` 
+```
+
 *(If you get a permission error, run: `chmod +x activate.sh` first.)*
 
 **For Windows:**
+
 ```bat
 activate.bat
 ```
 
 This will:
-
 - Create the `.venv` folder if needed
 - Activate the virtual environment
 - Install dependencies from requirements.txt
@@ -28,7 +45,9 @@ python news_agent.py
 python app.py
 ```
 
-## Gradio UI (app.py)
+---
+
+## Gradio App Interface (app.py)
 
 Start the Gradio application with:
 
@@ -36,25 +55,34 @@ Start the Gradio application with:
 python app.py
 ```
 
-In the application you can enter a topic or keyword (e.g. nato, sports, economy, entertainment, politics, science, technology, health, weather, culture, travel, education, business, environment) and get sentiment and clickbait analysis of news headlines.
+In the app, you can input a topic or keyword (such as: 'nato', 'sports', 'economy', 'entertainment', 'politics', 'science', 'technology', 'health', 'weather', 'culture', 'travel', 'education', 'business', 'environment') and receive sentiment and clickbait analysis of news headlines.
 
-## NewsAgent analysis results and explanations
+---
+
+## NewsAgent Analysis Results and Explanations
 
 news_agent.py saves the analysis results to the file `news_results.json`. For each news item:
-
-- `rss_url`: RSS source URL
-- `url`: news article link
-- `headline`: headline
+- `rss_url`: the RSS source address
+- `url`: news link
+- `headline`: headline text
 - `headline_score`: sentiment analysis of the headline
-- `body_score`: sentiment analysis of the news body
-- `clickbait`: whether the headline is clickbait (True = yes)
+- `body_score`: sentiment analysis of the article body
+- `clickbait`: whether the headline is considered clickbait (True = yes)
 
-Explanations:
-
+Explanation of fields:
 - `neg`: How negative the text is (0–1)
 - `neu`: How neutral the text is (0–1)
 - `pos`: How positive the text is (0–1)
-- `compound`: Summary score (-1 = very negative, +1 = very positive)
-- `clickbait`: If the sentiment scores of the headline and body differ significantly or the headline is very negative, it is considered clickbait
+- `compound`: Overall score (-1 = very negative, +1 = very positive)
+- `clickbait`: If headline and body sentiment scores differ significantly or the headline is highly negative, it is considered clickbait.
 
-The results can be used to assess news quality and identify clickbait headlines.
+You can use these results to assess news quality and identify clickbait headlines.
+
+---
+
+## Additional Recommendations
+
+- Always maintain up-to-date documentation (README, requirements.txt, code comments).
+- Use Python virtual environments for every project.
+- Expand code comments to clarify purpose and logic in each file.
+- For more detailed information or files, visit: [news_verifier on GitHub](https://github.com/allegoria-ai/news_verifier).
