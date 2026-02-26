@@ -1,4 +1,4 @@
-## Cloning the Repository
+# Cloning the Repository
 
 To clone this repository and get started, run:
 
@@ -14,7 +14,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-# Quick Setup: Activate Virtual Environment
+## Quick Setup: Activate Virtual Environment
 
 It’s recommended to activate your Python virtual environment before running any code. This keeps your dependencies isolated and your project safe.
 
@@ -33,6 +33,7 @@ activate.bat
 ```
 
 This will:
+
 - Create the `.venv` folder if needed
 - Activate the virtual environment
 - Install dependencies from requirements.txt
@@ -62,6 +63,7 @@ In the app, you can input a topic or keyword (such as: 'nato', 'sports', 'econom
 ## NewsAgent Analysis Results and Explanations
 
 news_agent.py saves the analysis results to the file `news_results.json`. For each news item:
+
 - `rss_url`: the RSS source address
 - `url`: news link
 - `headline`: headline text
@@ -70,6 +72,7 @@ news_agent.py saves the analysis results to the file `news_results.json`. For ea
 - `clickbait`: whether the headline is considered clickbait (True = yes)
 
 Explanation of fields:
+
 - `neg`: How negative the text is (0–1)
 - `neu`: How neutral the text is (0–1)
 - `pos`: How positive the text is (0–1)
