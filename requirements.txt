@@ -3,3 +3,4 @@ requests
 beautifulsoup4
 nltk
 lxml
+robotframework-browser
