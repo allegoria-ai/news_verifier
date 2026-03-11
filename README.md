@@ -21,21 +21,6 @@ It’s recommended to activate your Python virtual environment before running an
 **For Linux/macOS:**
 
 ```bash
-./activate.sh
-```
-
-*(If you get a permission error, run: `chmod +x activate.sh` first.)*
-
-**For Windows:**
-
-```bat
-activate.bat
-```
-
-This will:
-- Create the `.venv` folder if needed
-- Activate the virtual environment
-- Install dependencies from requirements.txt
 
 You can now run:
 
@@ -50,9 +35,6 @@ python app.py
 ## Gradio App Interface (app.py)
 
 Start the Gradio application with:
-
-```bash
-python app.py
 ```
 
 In the app, you can input a topic or keyword (such as: 'nato', 'sports', 'economy', 'entertainment', 'politics', 'science', 'technology', 'health', 'weather', 'culture', 'travel', 'education', 'business', 'environment') and receive sentiment and clickbait analysis of news headlines.
@@ -61,7 +43,7 @@ In the app, you can input a topic or keyword (such as: 'nato', 'sports', 'econom
 
 ## NewsAgent Analysis Results and Explanations
 
-news_agent.py saves the analysis results to the file `news_results.json`. For each news item:
+news_agent.py saves the analysis results to the file `test_results/outputs/news_results.json`. For each news item:
 - `rss_url`: the RSS source address
 - `url`: news link
 - `headline`: headline text

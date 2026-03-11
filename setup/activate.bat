@@ -6,8 +6,8 @@ if not exist ".venv" (
 REM Activate venv
 call .venv\Scripts\activate.bat
 REM Install requirements if requirements.txt exists
-if exist requirements.txt (
-    pip install -r requirements.txt
+if exist setup\requirements.txt (
+    pip install -r setup\requirements.txt
 )
 echo Virtual environment activated!
 echo You can now run python news_agent.py or python app.py

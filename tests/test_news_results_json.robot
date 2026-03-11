@@ -7,14 +7,8 @@ Library    JSONLibrary
 
 News Results JSON Format Is Valid
     [Documentation]    Validate the structure and required fields of news_results.json
-    ${json_path}=    Set Variable    news_results.json
-    ${exists}=    Run Keyword And Return Status    File Should Exist    ${json_path}
-    
-    # Check alternative path if first fails
-    IF    not ${exists}
-        ${json_path}=    Set Variable    ../news_results.json
-        File Should Exist    ${json_path}
-    END
+    ${json_path}=    Set Variable    ../test_results/outputs/news_results.json
+    File Should Exist    ${json_path}
 
     ${json}=    Load JSON From File    ${json_path}
     Should Not Be Empty    ${json}

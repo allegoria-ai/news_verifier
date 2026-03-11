@@ -103,9 +103,9 @@ class NewsAgent:
                     'clickbait': clickbait
                 })
         if save_to_file:
-            with open('news_results.json', 'w', encoding='utf-8') as f:
+            with open('test_results/outputs/news_results.json', 'w', encoding='utf-8') as f:
                 json.dump(results, f, ensure_ascii=False, indent=2)
-            print("\nTulokset tallennettu tiedostoon news_results.json")
+            print("\nTulokset tallennettu tiedostoon test_results/outputs/news_results.json")
 
 if __name__ == '__main__':
     nltk.download('vader_lexicon')

@@ -1,5 +1,4 @@
 .venv/
-log.html
-output.xml
-report.html
+test_results/logs/
+test_results/outputs/
 playwright-log.txt
